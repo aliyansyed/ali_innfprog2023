@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if1</title>
+</head>
+<body>
+    <p id="utskrift"></p>
+    <script>
+        const name = "ali"
+        let message = ""
+        if (name === "ali") {
+           message += " navn mitt er " + name + " syed";
+        } else{
+            message += "mitt navn er ikke " + name + " syed";
+        }
+        console.log(message)
+        document.getElementById("utskrift").innerHTML = message
+    </script>
+</body>
+</html>
