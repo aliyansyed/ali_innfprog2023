@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object cheat sheet</title>
+</head>
+<body>
+    <p id="lecturerinfo"></p>
+    <script>
+        const lecturer = {
+            fullname: "Tore Marius Akerbæk",
+            birthyear: 1983,
+            email: "toremake@hiof.no",
+            office: "d1-016",
+        }
+        document.getElementById("lecturerinfo").innerHTML = `${lecturer.fullname} (${ 2023 - lecturer.birthyear}) sitter på kontoret ${lecturer.office}
+         og kan nåes på epost ${lecturer.email}.`
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array printout cheat sheet</title>
+</head>
+<body>
+    <ul id="handleliste">
+
+    </ul>
+    <script>
+        const shoppingList = ["brød", "egg", "melk", "sukker", "ost", "sjokolade", "epler", "bananer"]
+        let shoppingListHTML= ""
+        shoppingList.map(element => shoppingListHTML += `<li>${element}</li> `)
+
+
+
+        document.getElementById("handleliste").innerHTML = shoppingListHTML
+    </script>
+</body>
+</html>
