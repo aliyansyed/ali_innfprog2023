@@ -6,10 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="svar"></p>
     <script>
         const myAge = 20
         let message = ""
-        
+        if(myAge >= 18) {
+            message += "personen er myndig,"
+        } else {
+            message += "personen er ikke myndig,"
+        }
+        if(myAge >= 18, myAge <= 62){
+            message += " du er klar for studie eller arbeidslivet" 
+        }
+        document.getElementById("svar").innerHTML = message
     </script>
 </body>
 </html>
