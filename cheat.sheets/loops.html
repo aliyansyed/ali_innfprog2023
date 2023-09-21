@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops cheat sheet</title>
+</head>
+<body>
+    <h2>nedtellling fra 10</h2>
+    <section id="countdown"></section>
+    <h2>alle femmerne mellom 50 og 100</h2>
+    <section id="five"></section>
+    <h2>sum of the hundred</h2>
+    <p id="hundred"></p>
+    <script>
+        for(let teller = 10; teller >= 0; teller--) {
+            document.getElementById("countdown").innerHTML += `<p>${teller}</p>`
+        }
+
+        for(let teller = 50; teller <= 100; teller = teller + 5) {
+            document.getElementById("five").innerHTML += teller + ","
+        }
+        let whileteller = 1
+        while (whileteller < 20) {
+            document.getElementById("five").innerHTML += `<p>${whileteller}</p>`
+            whileteller++
+        }
+        // bruk en for løkke fir å legge sammen alle tallene fra 1 til 100
+        // utskriften skal være 1 + 2 + 3 .. + 100 = SUM
+      /*  let sum = 0;
+    let sumString = "";
+
+    for (let i = 1; i <= 100; i++) {
+    sum += i;
+     sumString += i;
+
+     if (i < 100) {
+      sumString += " + ";
+      } else {
+      sumString += " = " + sum;
+     }
+    }
+    console.log(sumString);
+    */
+    // chatgpt løsning
+    // lærer sin løsning
+    let sum = 0
+    const max = 670
+    for(let tall = 1; tall <=max; tall++){
+        sum += tall
+        if(tall < max) {
+            document.getElementById("hundred").innerHTML += tall + " + "
+        } else {
+            document.getElementById("hundred"),innerHTML += tall + " = " + sum
+        }
+        
+    }
+
+    // vi ønsker å skrive ut alle tall mellom 1 og 100 som er delelig på 7
+    
+    </script>
+</body>
+</html>
