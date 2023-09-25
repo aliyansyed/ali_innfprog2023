@@ -67,7 +67,7 @@ canvas {
 
 /* NOTEBOOK */
 #notebook {
-    display: block;
+    
     background: rgba(0,0,0,.5);
     z-index: 99;
     width: 100%;
@@ -166,4 +166,7 @@ canvas {
 .illustration img {
     width: 32px;
     height: auto;
+}
+.hidden {
+    display: none !important;
 }

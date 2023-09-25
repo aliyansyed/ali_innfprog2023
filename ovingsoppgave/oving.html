@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>bigsmoke er duf i r6</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
     
-    <main>
-        <p>This is a simple website with a button.</p>
-        <button id="myButton">Click me!</button>
-    </main>
+    
+    <h1>Welcome to the Bad R6 Player Page</h1>
+    <p>This page is dedicated to celebrating the fun of playing Rainbow Six Siege, no matter your skill level!</p>
+    
+    
+    <button id="showMessageButton">Click me!</button>
 
-    <footer>
-        <p>&copy; 2023 My Website</p>
-    </footer>
+    
+    <div id="messageContainer"></div>
 
-    <!-- JavaScript code for the button -->
     <script>
-        // Get the button element by its ID
-        const myButton = document.getElementById("myButton");
+      
+        var button = document.getElementById('showMessageButton');
 
-        // Function to be executed when the button is clicked
-        function buttonClick() {
-            alert("Button clicked!");
-        }
+        
+        var messageContainer = document.getElementById('messageContainer');
 
-        // Attach the function to the button's click event
-        myButton.addEventListener("click", buttonClick);
+        // Add a click event listener to the button
+        button.addEventListener('click', function() {
+          
+            messageContainer.innerHTML = "Keep having fun playing R6, and remember, practice makes perfect!";
+        });
     </script>
+    
+ 
 </body>
 </html>

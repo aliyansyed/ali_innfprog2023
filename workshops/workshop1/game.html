@@ -17,7 +17,7 @@
     <header>
         <section id="player">
             <ul>
-                <li><img src="icons/shield.svg"> <span id="playerName">Marius</span></li>
+                <li><img src="icons/shield.svg"> <span id="playerName">ali</span></li>
                 <li><img src="icons/energydrink.svg" title="energy"> <span id="energy">3</span></li>
                 <li><img src="icons/notebook.svg"> <span id="notebookItems">0</span></li>
                 <li><img src="icons/solution.svg"> <span id="points">0</span> poeng</li>
@@ -75,13 +75,72 @@
     </main>
     <script>
         //PREPARE GAME CONFIG AND VARIABLES
-        //TODO: config
+        //TODO: config oprettet objektet kalt gameConfig med de testverdiene som ble gitt
+        let gameConfig = {
+            playerName: "ali",
+            energy : 5,
+            points : 10,
+            duration : 138,
+        }
        
         //TODO: notebook
         
 
         //TODO: print playerinfo to HTML
-        
+        let playerNameElement = document.getElementById("playerName");
+        let energyElement = document.getElementById("energy");
+        let notebookItemsElement = document.getElementById("notebookItems");
+        let pointsElement = document.getElementById("points");
+        let durationElement = document.getElementById("duration");
+
+    // Oppdater HTML-elementene med verdiene fra gameConfig
+        playerNameElement.textContent = gameConfig.playerName;
+        energyElement.textContent = gameConfig.energy;
+        notebookItemsElement.textContent = gameConfig.notebookItems;
+        pointsElement.textContent = gameConfig.points;
+        durationElement.textContent = gameConfig.duration + " sekunder";
+
+        let notebook = {
+            varables : 3,
+            arrays : 2,
+            loops : 4,
+            functions : 7,
+        }
+        // Legg til event-lyttere for knappene
+      // Legg til event-lyttere for knappene
+const notebookToggler = document.getElementById("notebookToggler");
+const infoToggler = document.getElementById("infoToggler");
+const notebookSection = document.getElementById("notebook");
+const infoSection = document.getElementById("info");
+
+// Event-lytter for åpning og lukking av notatboken
+// Legg til event-lyttere for knappene
+const notebookToggler = document.getElementById("notebookToggler");
+const infoToggler = document.getElementById("infoToggler");
+const notebookSection = document.getElementById("notebook");
+const infoSection = document.getElementById("info");
+
+// Event-lytter for åpning og lukking av notatboken
+notebookToggler.addEventListener("click", function () {
+    console.log("Notebook button clicked");
+    toggleHidden(notebookSection);
+});
+
+infoToggler.addEventListener("click", function () {
+    console.log("Info button clicked");
+    toggleHidden(infoSection);
+});
+
+// Funksjon for å bytte tilstanden til "hidden"-klassen
+function toggleHidden(element) {
+    if (element.classList.contains("hidden")) {
+        element.classList.remove("hidden");
+    } else {
+        element.classList.add("hidden");
+    }
+}
+
+
         //TODO: print notebook info to HTML
 
         //(BONUS) TODO: function for all prints
