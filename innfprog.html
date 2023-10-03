@@ -3,15 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hei</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1 id="headline">variabler</h1>
-    <p>her lærer vi litt om varianler</p>
-    <p>varianler kan tenkes på som gaver</p>
-    <p>gaver vi gir vet vi hva inneholder</p>
-<p>gaver vi får, må vi pakke opp</p>
+    <p id="name"></p>
+    <p id="mail"></p>
+    <p id="age"></p>
 
-<script src="back.js" ></script>
+    <script>
+
+        function print(name,mail,birthyear) {
+            
+            if (name === "ali") {
+                document.getElementById("name").innerHTML = "navnet er ali"
+            } else {
+                document.getElementById("name").innerHTML = "ikke opgitt"
+            }
+             if (mail === "aliyans@hiof.no") {
+                document.getElementById("mail").innerHTML = " epost adressen er aliyans@hiof.no"
+             } else {
+                document.getElementById("mail").innerHTML = "ikke opgitt"
+             }
+             const age = 2023 - birthyear
+             if (age === 20) {
+                text = `alderen din er ${age}`
+             } else {
+                text = `ikke oppgitt`
+             }
+             document.getElementById("name").innerHTML = text
+
+        }
+        print("ali","aliyans@hiof.no,20")
+
+
+
+    </script>
 </body>
 </html>
